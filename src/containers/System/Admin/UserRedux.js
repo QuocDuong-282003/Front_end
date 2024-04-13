@@ -331,7 +331,7 @@ class UserRedux extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div   >
 
                 {this.state.isOpen === true &&
                     <Lightbox
