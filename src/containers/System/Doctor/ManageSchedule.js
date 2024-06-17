@@ -147,9 +147,10 @@ class ManageSchedule extends Component {
                     <FormattedMessage id="manage-schedule.title" />
                 </div>
                 <div className="container">
+
                     <div className="row">
                         <div className="col-6 form-group">
-                            <label ><FormattedMessage id="manage-schedule.choose-doctor" /></label>
+                            <label><FormattedMessage id="manage-schedule.choose-doctor" /></label>
                             <Select
                                 value={this.state.selectedDoctor}
                                 onChange={this.handleChangeSelect}
@@ -157,14 +158,16 @@ class ManageSchedule extends Component {
                             />
                         </div>
                         <div className="col-6 form-group">
-                            <label ><FormattedMessage id="manage-schedule.choose-date" /></label>
-                            <DatePicker onChange={this.handleOnchangeDatePicker}
+                            <label><FormattedMessage id="manage-schedule.choose-date" /></label>
+                            <DatePicker
+                                onChange={this.handleOnchangeDatePicker}
                                 className="form-control"
                                 value={this.state.currentDate}
-                                minDate={yesterday} // chỉ lấy date hiểnj tại. not lấy quá khứ
-
+                                minDate={yesterday} // chỉ lấy date hiện tại, không lấy quá khứ
                             />
                         </div>
+
+
                         <div className="col-12 pick-hour-container">
                             {rangeTime && rangeTime.length > 0 &&
                                 rangeTime.map((item, index) => {
