@@ -5,6 +5,7 @@ import UserManage from '../containers/System/UserManage';
 import UserRedux from '../containers/System/Admin/UserRedux';
 import Header from '../containers/Header/Header';
 import ManageDoctor from '../containers/System/Admin/ManageDoctor';
+import ManageSpeciatly from '../containers/System/Specialty/ManageSpeciatly';
 class System extends Component {
     render() {
         {/* {this.props.isLoggedIn && <Header />} */ }
@@ -18,6 +19,8 @@ class System extends Component {
                             <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/user-redux" component={UserRedux} />
                             <Route path="/system/manager-doctor" component={ManageDoctor} />
+                            <Route path="/system/manage-specialty" component={ManageSpeciatly} />
+
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>

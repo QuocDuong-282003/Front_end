@@ -8,11 +8,31 @@ import { LANGUAGES } from '../../../utils';
 // Import css files
 
 import specialtyImg from "../../../assets/specialty/coxuong.jpg";
+import { getAllSpecialty } from '../../../services/userService';
+import { withRouter } from 'react-router';
 class Specialty extends Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataSpecialty: []
+        }
+    }
+    async componentDidMount() {
+        let res = await getAllSpecialty();
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataSpecialty: res.data
+            })
+        }
+    }
+    handleViewDetailSpecialty = (item) => {
+        if (this.props.history) {
+            this.props.history.push(`/detail-specialty/${item.id}`)
+        }
+    }
     render() {
 
-
+        let { dataSpecialty } = this.state;
         return (
             <div className="section-share section-specialty">
                 <div className="section-container">
@@ -22,30 +42,22 @@ class Specialty extends Component {
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
-                            <div className="section-customize">
-                                <div className="bg-image section-specialty" />
-                                <div>Cơ xương khớp 1</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-specialty" />
-                                <div>Cơ xương khớp 2</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-specialty" />
-                                <div>Cơ xương khớp 3</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-specialty" />
-                                <div>Cơ xương khớp 4</div>
-                            </div>
-                            <div className="section-customize ">
-                                <div className="bg-image section-specialty" />
-                                <div>Cơ xương khớp 5</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-specialty" />
-                                <div>Cơ xương khớp 6</div>
-                            </div>
+                            {dataSpecialty && dataSpecialty.length > 0 &&
+                                dataSpecialty.map((item, index) => {
+                                    return (
+                                        <div className="section-customize specialty-child"
+                                            key={index}
+                                            onClick={() => this.handleViewDetailSpecialty(item)}
+                                        >
+                                            <div className="bg-image section-specialty"
+                                                style={{ backgroundImage: `url(${item.image})` }}
+                                            />
+                                            <div className="specialty-name">{item.name}</div>
+                                        </div>
+                                    )
+                                })
+                            }
+
 
                         </Slider>
                     </div>
@@ -72,4 +84,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Specialty));
