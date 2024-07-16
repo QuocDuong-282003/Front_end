@@ -39,15 +39,26 @@ class DetailSpecialty extends Component {
 
                     }
 
+                    let dataProvince = resProvince.data;
+                    if (dataProvince && dataProvince.length > 0) {
+                        dataProvince.unshift({
+                            createdAt: null,
+                            keyMap: "ALL",
+                            type: "PROVINCE",
+                            valueEn: "All",
+                            valueVi: "Toàn quốc",
+
+                        })
+                    }
+
+                    this.setState({
+                        dataDetailSPecialty: res.data,
+                        arrDoctorId: arrDoctorId,
+                        listProvince: dataProvince ? dataProvince : []
+
+                    })
                 }
-                this.setState({
-                    dataDetailSPecialty: res.data,
-                    arrDoctorId: arrDoctorId,
-                    listProvince: resProvince.data
-
-                })
             }
-
         }
     }
 
@@ -59,9 +70,38 @@ class DetailSpecialty extends Component {
         }
 
     }
-    handleOnchangeSelect = (event) => {
-        console.log('duong checl onchange :>>>>', event.target.value)
+    handleOnchangeSelect = async (event) => {
+        if (this.props.match && this.props.match.params && this.props.match.params.id) {
+            let id = this.props.match.params.id;
+            let location = event.target.value;
+
+            // Giải thích: Sử dụng từ khóa 'await' đúng cách để đợi phản hồi từ 'getDetailSpecialtyById'
+            let res = await getDetailSpecialtyById({
+                id: id,
+                location: location
+            });
+
+            if (res && res.errCode === 0) {
+                let data = res.data;
+                let arrDoctorId = [];
+
+                if (data && !_.isEmpty(data)) {  // Sửa 'res.data' thành 'data' để nhất quán
+                    let arr = data.doctorSpecialty;
+                    if (arr && arr.length > 0) {
+                        arr.forEach(item => {  // Sử dụng 'forEach' thay cho 'map' để không bị lỗi trả về undefined
+                            arrDoctorId.push(item.doctorId);
+                        });
+                    }
+                }
+                this.setState({
+                    dataDetailSPecialty: data,
+                    arrDoctorId: arrDoctorId
+                });
+            }
+
+        }
     }
+
     render() {
         let { arrDoctorId, dataDetailSPecialty, listProvince } = this.state;
         let { language } = this.props
@@ -102,6 +142,8 @@ class DetailSpecialty extends Component {
                                             <ProfileDoctor
                                                 doctorId={item}
                                                 isShowDescriptionDoctor={true}
+                                                isShowLinkDetail={true}
+                                                isShowPrice={false}
                                             />
                                         </div>
 
