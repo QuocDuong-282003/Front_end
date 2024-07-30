@@ -7,6 +7,7 @@ import Header from '../containers/Header/Header';
 import ManageDoctor from '../containers/System/Admin/ManageDoctor';
 import ManageSpeciatly from '../containers/System/Specialty/ManageSpeciatly';
 import ManageClinic from '../containers/System/Clinic/ManageClinic';
+import HandBook from '../containers/System/Handbook/HandBook';
 class System extends Component {
     render() {
         {/* {this.props.isLoggedIn && <Header />} */ }
@@ -22,7 +23,7 @@ class System extends Component {
                             <Route path="/system/manager-doctor" component={ManageDoctor} />
                             <Route path="/system/manage-specialty" component={ManageSpeciatly} />
                             <Route path="/system/manage-clinic" component={ManageClinic} />
-
+                            <Route path="/system/manage-handbook" component={HandBook} />
                             <Route component={() => { return (<Redirect to={systemMenuPath} />) }} />
                         </Switch>
                     </div>
