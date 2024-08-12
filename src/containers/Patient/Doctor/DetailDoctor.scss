@@ -28,6 +28,9 @@
             }
             .down{
                 padding-top: 10px;
+                .like-share-plugin{
+                    margin: 10px 0 20px 0;
+                }
             }
         }
     }
@@ -49,7 +52,7 @@
        border-bottom: 1px solid #ddd;
         background-color: #f9f9f9 ;
         padding: 10px 100px;
-        
+        h1,h2
         h3{
             font-size: 17px;
 
@@ -60,6 +63,6 @@
         }
     }
     .comment-doctor{
-        height: 50px;
+        padding: 10px 100px;
     }
 }
