@@ -10,6 +10,7 @@ import { LANGUAGES } from '../../../utils';
 import specialtyImg from "../../../assets/specialty/coxuong.jpg";
 import { getAllSpecialty } from '../../../services/userService';
 import { withRouter } from 'react-router';
+import HomeFooter from '../HomeFooter';
 class Specialty extends Component {
     constructor(props) {
         super(props);
@@ -40,6 +41,7 @@ class Specialty extends Component {
                         <span className="title-section"> <FormattedMessage id="homepage.popular-specialties" /></span>
                         <button className="btn-section"> <FormattedMessage id="homepage.more-info" /></button>
                     </div>
+
                     <div className="section-body">
                         <Slider {...this.props.settings}>
                             {dataSpecialty && dataSpecialty.length > 0 &&
@@ -53,13 +55,16 @@ class Specialty extends Component {
                                                 style={{ backgroundImage: `url(${item.image})` }}
                                             />
                                             <div className="specialty-name">{item.name}</div>
+
                                         </div>
+
                                     )
                                 })
                             }
 
 
                         </Slider>
+
                     </div>
 
                 </div>
