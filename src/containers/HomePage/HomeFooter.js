@@ -7,6 +7,7 @@ import LogoPhongKham from '../../assets/LogoPhongKham.svg';
 import bocongthuong from '../../assets/icon/bocongthuong.svg'
 import './HomeFooter.scss'
 import { withRouter } from 'react-router';
+import { Link } from "react-router-dom";
 class HomeFooter extends Component {
     returnToHome = () => {
         if (this.props.history) {
@@ -90,16 +91,25 @@ class HomeFooter extends Component {
                                 <span>Tuyển dụng</span>
                             </div>
                             <div className="center-footer">
-                                <span>Chính sách bảo mật</span>
+
+                                <Link to="/detail-footer">
+                                    <span> Chính sách bảo mật</span>
+                                </Link>
                             </div>
                             <div className="center-footer">
+
                                 <span>Quy chế hoạt động</span>
+
                             </div>
                             <div className="center-footer">
-                                <span>Điều khoản sử dụng</span>
+                                <Link to="/detail-terms-of-use">
+                                    <span>Điều khoản sử dụng</span>
+                                </Link>
                             </div>
                             <div className="center-footer">
-                                <span>Câu hỏi thường gặp</span>
+                                <Link to="/benh-nhan-thuong-hoi">
+                                    <span>Câu hỏi thường gặp</span>
+                                </Link>
                             </div>
                         </div>
 

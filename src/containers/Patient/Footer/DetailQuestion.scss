@@ -1,0 +1,36 @@
+.detail-question-container {
+    .detail-question-body{
+        margin: 0 auto;
+        width: 1000px;
+        .detail-question-title {
+           
+            padding-top: 15px;
+            padding-bottom: 10px;
+            border-top: 1px solid none;
+            border-bottom: 1px solid #c4baba;
+        }
+            .detail-question{
+            //   padding-top: 15px;
+            // padding-bottom: 10px;
+            ul.link-question {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li{
+                   padding: 4px;
+                    a.group-title {
+                        padding-left: 0;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #42b6c9;
+                    }
+                }
+            }
+                }
+            
+            
+           
+   
+}
+}

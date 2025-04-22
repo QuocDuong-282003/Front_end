@@ -8,8 +8,13 @@ export const path = {
     DETAIL_SPECIALTY: '/detail-specialty/:id',
     DETAIL_CLINIC: '/detail-clinic/:id',
     HAND_BOOK: '/detail-handbook/:id',
-
-
+    DETAIL_FOOTER: '/detail-footer',
+    DETAIL_TERMS_OF_USE: '/detail-terms-of-use',
+    DETAIL_QUESTION: '/benh-nhan-thuong-hoi',
+    BOOKING_CARE: '/booking-care',
+    USER_MANUAL: '/user-manual',
+    ABOUT_DOCTOR: '/about-doctor',
+    MEDICAL_FACILITIES: '/medical-facilities',
     VERIFY_EMAIL_BOOKING: '/verify-booking'
 
 };

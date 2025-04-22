@@ -19,6 +19,13 @@ import VerifyEmail from './Patient/VerifyEmail.js';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty.js';
 import DetailClinic from './Patient/Clinic/DetailClinic.js';
 import DetailHanBook from './Patient/Handbook/DetailHanBook.js';
+import DetailFooter from './Patient/Footer/DetailFooter.js';
+import DetailTermsofUse from './Patient/Footer/DetailTermsofUse.js';
+import DetailQuestion from './Patient/Footer/DetailQuestion.js';
+import BookingCare from './Patient/Footer/QuestionFooter/BookingCare.js';
+import UserManual from './Patient/Footer/QuestionFooter/UserManual.js';
+import AboutDoctor from './Patient/Footer/QuestionFooter/AboutDoctor.js';
+import MedicalFacilities from './Patient/Footer/QuestionFooter/MedicalFacilities.js'
 class App extends Component {
 
     handlePersistorState = () => {
@@ -60,7 +67,14 @@ class App extends Component {
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
                                     <Route path={path.HAND_BOOK} component={DetailHanBook} />
-
+                                    <Route path={path.DETAIL_FOOTER} component={DetailFooter} />
+                                    <Route path={path.DETAIL_TERMS_OF_USE} component={DetailTermsofUse} />
+                                    <Route path={path.DETAIL_QUESTION} component={DetailQuestion} />
+                                    {/* child  */}
+                                    <Route path={path.BOOKING_CARE} component={BookingCare} />
+                                    <Route path={path.USER_MANUAL} component={UserManual} />
+                                    <Route path={path.ABOUT_DOCTOR} component={AboutDoctor} />
+                                    <Route path={path.MEDICAL_FACILITIES} component={MedicalFacilities} />
 
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
 
