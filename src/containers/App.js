@@ -25,7 +25,12 @@ import DetailQuestion from './Patient/Footer/DetailQuestion.js';
 import BookingCare from './Patient/Footer/QuestionFooter/BookingCare.js';
 import UserManual from './Patient/Footer/QuestionFooter/UserManual.js';
 import AboutDoctor from './Patient/Footer/QuestionFooter/AboutDoctor.js';
-import MedicalFacilities from './Patient/Footer/QuestionFooter/MedicalFacilities.js'
+import MedicalFacilities from './Patient/Footer/QuestionFooter/MedicalFacilities.js';
+import AboutMedicalFacility from './Patient/Footer/QuestionFooter/AboutMedicalFacility.js';
+import AboutInsurance from './Patient/Footer/QuestionFooter/AboutInsurance.js';
+import QuestionAnswers from './Patient/Footer/QuestionFooter/QuestionAnswers.js';
+import HealthRecords from './Patient/Footer/QuestionFooter/HealthRecords.js';
+import CustomerBenefits from './Patient/Footer/QuestionFooter/CustomerBenefits.js';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -75,7 +80,11 @@ class App extends Component {
                                     <Route path={path.USER_MANUAL} component={UserManual} />
                                     <Route path={path.ABOUT_DOCTOR} component={AboutDoctor} />
                                     <Route path={path.MEDICAL_FACILITIES} component={MedicalFacilities} />
-
+                                    <Route path={path.ABOUT_MEDICAL_FACILITIES} component={AboutMedicalFacility} />
+                                    <Route path={path.ABOUT_INSURANCE} component={AboutInsurance} />
+                                    <Route path={path.CUSTOMER_BENEFITS} component={CustomerBenefits} />
+                                    <Route path={path.POST_SURGERY_QUESTIONS_AND_ANSWERS} component={QuestionAnswers} />
+                                    <Route path={path.HEALTH_RECORDS} component={HealthRecords} />
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
 
                                 </Switch>

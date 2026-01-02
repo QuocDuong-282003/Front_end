@@ -1,6 +1,7 @@
 export default {
     api: {
-        API_BASE_URL: "http://localhost:8080/",
+        // Use relative path so nginx proxy at /api forwards to backend in docker
+        API_BASE_URL: "/",
         ROUTER_BASE_NAME: null,
     },
     app: {

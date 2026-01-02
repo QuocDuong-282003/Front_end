@@ -22,7 +22,9 @@ class HomeFooter extends Component {
 
     render() {
         return (
+
             <div className="home-footer">
+
                 <div className="container">
                     <div className="row">
                         {/* <!-- Left Footer Section --> */}

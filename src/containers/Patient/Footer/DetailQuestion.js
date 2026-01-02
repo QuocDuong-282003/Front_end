@@ -41,11 +41,11 @@ class DetailQuestion extends Component {
                             <li><Link className="group-title" to="/user-manual/huong-dan-su-dung-f2">Hướng dẫn sử dụng</Link></li>
                             <li><Link className="group-title" to="/about-doctor/ve-bac-si-f3">Về bác sĩ</Link></li>
                             <li><Link className="group-title" to="/medical-facilities/ve-co-so-y-te-f4">Cơ sở y tế</Link></li>
-                            <li><Link className="group-title" to="/benh-nhan-thuong-hoi/GiaVaThanhToan">Giá và thanh toán</Link></li>
-                            <li><Link className="group-title" to="/benh-nhan-thuong-hoi/BaoHiem">Bảo hiểm</Link></li>
-                            <li><Link className="group-title" to="/benh-nhan-thuong-hoi/LoiIchKhachHang">Lợi ích khách hang</Link></li>
-                            <li><Link className="group-title" to="/benh-nhan-thuong-hoi/HoiDapSauKham">Hỏi đáp sau khám</Link></li>
-                            <li><Link className="group-title" to="/benh-nhan-thuong-hoi/HoSoSucKhoe">Hồ sơ sức khỏe</Link></li>
+                            <li><Link className="group-title" to="/about-medical-facilities/gia-va-thanh-toan">Giá và thanh toán</Link></li>
+                            <li><Link className="group-title" to="/about-insurance/bao-hiem">Bảo hiểm</Link></li>
+                            <li><Link className="group-title" to="/customer-benefits/loi-ich-khach-hang">Lợi ích khách hang</Link></li>
+                            <li><Link className="group-title" to="/post-surgery-questions-and-answers/hoi-dap-sau-kham">Hỏi đáp sau khám</Link></li>
+                            <li><Link className="group-title" to="/health-records/ho-so-suc-khoe">Hồ sơ sức khỏe</Link></li>
                         </ul>
                     </div>
                 </div>

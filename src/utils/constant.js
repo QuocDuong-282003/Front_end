@@ -15,8 +15,12 @@ export const path = {
     USER_MANUAL: '/user-manual',
     ABOUT_DOCTOR: '/about-doctor',
     MEDICAL_FACILITIES: '/medical-facilities',
-    VERIFY_EMAIL_BOOKING: '/verify-booking'
-
+    VERIFY_EMAIL_BOOKING: '/verify-booking',
+    ABOUT_MEDICAL_FACILITIES: '/about-medical-facilities',
+    ABOUT_INSURANCE: '/about-insurance',
+    CUSTOMER_BENEFITS: '/customer-benefits',
+    POST_SURGERY_QUESTIONS_AND_ANSWERS: '/post-surgery-questions-and-answers',
+    HEALTH_RECORDS: '/health-records'
 };
 
 export const LANGUAGES = {
