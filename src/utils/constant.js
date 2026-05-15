@@ -8,10 +8,19 @@ export const path = {
     DETAIL_SPECIALTY: '/detail-specialty/:id',
     DETAIL_CLINIC: '/detail-clinic/:id',
     HAND_BOOK: '/detail-handbook/:id',
-
-
-    VERIFY_EMAIL_BOOKING: '/verify-booking'
-
+    DETAIL_FOOTER: '/detail-footer',
+    DETAIL_TERMS_OF_USE: '/detail-terms-of-use',
+    DETAIL_QUESTION: '/benh-nhan-thuong-hoi',
+    BOOKING_CARE: '/booking-care',
+    USER_MANUAL: '/user-manual',
+    ABOUT_DOCTOR: '/about-doctor',
+    MEDICAL_FACILITIES: '/medical-facilities',
+    VERIFY_EMAIL_BOOKING: '/verify-booking',
+    ABOUT_MEDICAL_FACILITIES: '/about-medical-facilities',
+    ABOUT_INSURANCE: '/about-insurance',
+    CUSTOMER_BENEFITS: '/customer-benefits',
+    POST_SURGERY_QUESTIONS_AND_ANSWERS: '/post-surgery-questions-and-answers',
+    HEALTH_RECORDS: '/health-records'
 };
 
 export const LANGUAGES = {

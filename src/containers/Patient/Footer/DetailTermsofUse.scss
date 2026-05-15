@@ -1,0 +1,29 @@
+.detail-terms-of-use-container {
+    .detail-terms-of-use-body {
+        .content-title {
+            margin: 0 auto;
+            width: 1000px;
+           
+            .baiviet-ten{
+                padding-top: 15px;
+            padding-bottom: 10px;
+                }
+            
+            }
+            .baiviet-noidung {
+                &.py-2 {
+                padding: 50px 50px;
+                background: #fcfaf6;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                font-size: 16px;
+                width: 1000px;
+                margin: 0 auto;
+                line-height: 1.6;
+                text-align: justify;
+            
+  
+        
+        }
+    }
+}
+}
